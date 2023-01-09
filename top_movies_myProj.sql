@@ -120,6 +120,7 @@ SELECT Studio, COUNT(*) as amt_produced FROM topmovies
     HAVING amt_produced >= 1;
 /** Now... which one has produced the most, and how many IS that? **/
 
+
 /** Using CASE
 How many movies released in each decade? **/
 SELECT COUNT(*) as amt_released, CASE
