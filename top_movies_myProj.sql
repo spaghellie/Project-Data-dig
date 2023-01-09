@@ -119,7 +119,22 @@ SELECT Studio, COUNT(*) as amt_produced FROM topmovies
     GROUP BY Studio
     HAVING amt_produced >= 1;
 /** Now... which one has produced the most, and how many IS that? **/
-
+CREATE TABLE studios (id INTEGER PRIMARY KEY, Studio TEXT, amt_produced INTEGER);
+INSERT INTO studios VALUES (1, "BV", 23), 
+    (2, "DW", 1), 
+    (3, "Fox", 13),
+    (4, "LG/S", 1),
+    (5, "LGF", 3),
+    (6, "NL", 3),
+    (7, "NM", 1),
+    (8, "P/DW", 9),
+    (9, "Par.", 7),
+    (10, "Sony", 11),
+    (11, "Sum.", 3),
+    (12, "Uni.", 8),
+    (13, "WB", 17);
+/** There has GOT to be a simpler way of doing that^ **/
+SELECT Studio, MAX(amt_produced) FROM studios;
 
 /** Using CASE
 How many movies released in each decade? **/
